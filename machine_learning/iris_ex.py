@@ -17,14 +17,16 @@ print ("y_test: ",y_test)
 
 print (f"Count: X_Train: {len(X_train)}, y_train: {len(y_train)}")
 """
-
+# Training
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
+# Testing
 predictions = model.predict(X_test)
 print ("Predictions: ", predictions)
 print("actual values: ", y_test)
 
+# New data is the specification of 151st flower
 new_data = [ [3,5,5,2] ]
 pred = model.predict(new_data)
 print ("New data pred: ",pred)
